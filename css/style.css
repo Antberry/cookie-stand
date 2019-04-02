@@ -15,3 +15,13 @@ body{
   vertical-align: top;
   padding-left: 50px;
 }
+#navtabs{
+  text-align: right;
+}
+#homefish{
+  width: 400px;
+  margin-left:400px;
+}
+#slogan{
+  text-align: center;
+}

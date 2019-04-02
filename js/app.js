@@ -12,7 +12,7 @@ var firstPike = {
   
   //get a random number for customers per hour
   randomNumber: function () {
-    return getRandomNumber(this.minCus,this.maxCus)
+    return getRandomNumber(this.minCus,this.maxCus);
   },
   //calculate how many cookies per hour
   cookieArray: [],
@@ -20,7 +20,7 @@ var firstPike = {
     for (var i = 0; i < hours.length; i++){
       console.log(this.randomNumber());
       this.cookieArray.push(Math.floor(this.randomNumber() * this.avgCookieSale));
-    };
+    }
     console.log(this.cookieArray);
   },
   //show how the results for each hour
@@ -37,12 +37,10 @@ var firstPike = {
   total: function(){
     for (var i = 0; i < this.cookieArray.length; i++){
       this.cookieTotal += this.cookieArray[i];
-      
     }
-    
     console.log(this.cookieTotal);
   }
-}
+};
 firstPike.cookiesPerHr();
 firstPike.hourlyresults();
 firstPike.total();
@@ -54,7 +52,7 @@ var seaTac = {
   avgCookieSale: 1.2,
   //get a random number for customers per hour
   randomNumber: function () {
-    return getRandomNumber(this.minCus,this.maxCus)
+    return getRandomNumber(this.minCus,this.maxCus);
   },
   //calculate how many cookies per hour
   cookieArray: [],
@@ -62,7 +60,7 @@ var seaTac = {
     for (var i = 0; i < hours.length; i++){
       console.log(this.randomNumber());
       this.cookieArray.push(Math.floor(this.randomNumber() * this.avgCookieSale));
-    };
+    }
     console.log(this.cookieArray);
   },
   //show how the results for each hour
@@ -79,12 +77,10 @@ var seaTac = {
   total: function(){
     for (var i = 0; i < this.cookieArray.length; i++){
       this.cookieTotal += this.cookieArray[i];
-      
     }
-    
     console.log(this.cookieTotal);
   }
-}
+};
 seaTac.cookiesPerHr();
 seaTac.hourlyresults();
 seaTac.total();
@@ -96,7 +92,7 @@ var seattleCen = {
   avgCookieSale: 3.7,
   //get a random number for customers per hour
   randomNumber: function () {
-    return getRandomNumber(this.minCus,this.maxCus)
+    return getRandomNumber(this.minCus,this.maxCus);
   },
   //calculate how many cookies per hour
   cookieArray: [],
@@ -104,7 +100,7 @@ var seattleCen = {
     for (var i = 0; i < hours.length; i++){
       console.log(this.randomNumber());
       this.cookieArray.push(Math.floor(this.randomNumber() * this.avgCookieSale));
-    };
+    }
     console.log(this.cookieArray);
   },
   //show how the results for each hour
@@ -121,12 +117,10 @@ var seattleCen = {
   total: function(){
     for (var i = 0; i < this.cookieArray.length; i++){
       this.cookieTotal += this.cookieArray[i];
-      
     }
-    
     console.log(this.cookieTotal);
   }
-}
+};
 seattleCen.cookiesPerHr();
 seattleCen.hourlyresults();
 seattleCen.total();
@@ -138,7 +132,7 @@ var capHill = {
   avgCookieSale: 2.8,
   //get a random number for customers per hour
   randomNumber: function () {
-    return getRandomNumber(this.minCus,this.maxCus)
+    return getRandomNumber(this.minCus,this.maxCus);
   },
   //calculate how many cookies per hour
   cookieArray: [],
@@ -146,7 +140,7 @@ var capHill = {
     for (var i = 0; i < hours.length; i++){
       console.log(this.randomNumber());
       this.cookieArray.push(Math.floor(this.randomNumber() * this.avgCookieSale));
-    };
+    }
     console.log(this.cookieArray);
   },
   //show how the results for each hour
@@ -163,12 +157,10 @@ var capHill = {
   total: function(){
     for (var i = 0; i < this.cookieArray.length; i++){
       this.cookieTotal += this.cookieArray[i];
-      
     }
-    
     console.log(this.cookieTotal);
   }
-}
+};
 capHill.cookiesPerHr();
 capHill.hourlyresults();
 capHill.total();
@@ -180,7 +172,7 @@ var alkiBeach = {
   avgCookieSale: 4.6,
   //get a random number for customers per hour
   randomNumber: function () {
-    return getRandomNumber(this.minCus,this.maxCus)
+    return getRandomNumber(this.minCus,this.maxCus);
   },
   //calculate how many cookies per hour
   cookieArray: [],
@@ -188,7 +180,7 @@ var alkiBeach = {
     for (var i = 0; i < hours.length; i++){
       console.log(this.randomNumber());
       this.cookieArray.push(Math.floor(this.randomNumber() * this.avgCookieSale));
-    };
+    }
     console.log(this.cookieArray);
   },
   //show how the results for each hour
@@ -205,12 +197,10 @@ var alkiBeach = {
   total: function(){
     for (var i = 0; i < this.cookieArray.length; i++){
       this.cookieTotal += this.cookieArray[i];
-      
     }
-    
     console.log(this.cookieTotal);
   }
-}
+};
 alkiBeach.cookiesPerHr();
 alkiBeach.hourlyresults();
 alkiBeach.total();
@@ -232,9 +222,9 @@ ulEl1.appendChild(liTotal1);
 // Seatac airport
 var ulEl2 = document.getElementById('seatac');
 console.log(ulEl2);
-for (var i = 0; i < seaTac.results.length; i++){
+for (var j = 0; j< seaTac.results.length; j++){
   var liEl2 = document.createElement('li');
-  liEl2.textContent = seaTac.results[i];
+  liEl2.textContent = seaTac.results[j];
   ulEl2.appendChild(liEl2);
 }
 var liTotal2 = document.createElement('li');
@@ -244,9 +234,9 @@ ulEl2.appendChild(liTotal2);
 //Seattle Center
 var ulEl3 = document.getElementById('seattle');
 console.log(ulEl3);
-for (var i = 0; i < seattleCen.results.length; i++){
+for (var k = 0; k < seattleCen.results.length; k++){
   var liEl3 = document.createElement('li');
-  liEl3.textContent = seattleCen.results[i];
+  liEl3.textContent = seattleCen.results[k];
   ulEl3.appendChild(liEl3);
 }
 var liTotal3 = document.createElement('li');
@@ -256,9 +246,9 @@ ulEl3.appendChild(liTotal3);
 //Capitol Hill
 var ulEl4 = document.getElementById('capitol');
 console.log(ulEl1);
-for (var i = 0; i < capHill.results.length; i++){
+for (var l = 0; l < capHill.results.length; l++){
   var liEl4 = document.createElement('li');
-  liEl4.textContent = capHill.results[i];
+  liEl4.textContent = capHill.results[l];
   ulEl4.appendChild(liEl4);
 }
 var liTotal4 = document.createElement('li');
@@ -268,9 +258,9 @@ ulEl4.appendChild(liTotal4);
 //Alki
 var ulEl5 = document.getElementById('alki');
 console.log(ulEl5);
-for (var i = 0; i < alkiBeach.results.length; i++){
+for (var m = 0; m < alkiBeach.results.length; m++){
   var liEl5 = document.createElement('li');
-  liEl5.textContent = alkiBeach.results[i];
+  liEl5.textContent = alkiBeach.results[m];
   ulEl5.appendChild(liEl5);
 }
 var liTotal5 = document.createElement('li');
@@ -279,6 +269,6 @@ ulEl5.appendChild(liTotal5);
 
 //-------------------------------------------Functions---------------------------------------------------
 // //function for random Number
- function getRandomNumber(min, max) {
-   return Math.floor(Math.random() * (max - min) + min);
- }
+function getRandomNumber(min, max) {
+  return Math.floor(Math.random() * (max - min) + min);
+}
