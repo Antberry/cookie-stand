@@ -1,0 +1,17 @@
+body{
+  background-color: darkgoldenrod;
+}
+#salmon {
+  text-align: center;
+}
+#fish{
+  width: 300px;
+}
+#dailysales{
+  text-align: center;
+}
+.storelist{
+  float: left;;
+  vertical-align: top;
+  padding-left: 50px;
+}
