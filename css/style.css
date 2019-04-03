@@ -10,11 +10,7 @@ body{
 #dailysales{
   text-align: center;
 }
-.storelist{
-  float: left;;
-  vertical-align: top;
-  padding-left: 50px;
-}
+
 #navtabs{
   text-align: right;
 }
