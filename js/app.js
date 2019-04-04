@@ -31,13 +31,14 @@ function Store (location, minCus, maxCus, avgCookieSale){
   };
   this.calCookiesPerHr();
   this.calHourlyresults();
+  // this.total();
   allStores.push(this);
 }
 
 Store.prototype.total = function(){
   for (var i = 0; i < this.cookiesPerHour.length; i++){
     this.totalcookiesPerDay += this.cookiesPerHour[i];
-    GrandTotal += this.totalcookiesPerDay;
+    // GrandTotal += this.totalcookiesPerDay;
   }
   console.log(this.totalcookiesPerDay);
 };
@@ -110,6 +111,7 @@ Store.prototype.render = function(){
     trEl.appendChild(tdEl);
   }
   tdEl = document.createElement('td');
+  this.total();
   tdEl.textContent = this.totalcookiesPerDay;
   trEl.appendChild(tdEl);
   storeTable.appendChild(trEl);
@@ -120,23 +122,32 @@ function makeFooterRow(){
   var tdEl = document.createElement('td');
   tdEl.textContent = 'Total Each Hour';
   trEl.appendChild(tdEl);
+  var hourSum = 0;
+  var totalSum = 0;
+  console.log('ssssss' +allStores);
   for (var i = 0; i < hours.length; i++){
-    var hourSum = firstPikeExistence.cookiesPerHour[i] + seaTacExistence.cookiesPerHour[i] + seattleCenExistence.cookiesPerHour[i]+ capHillExistence.cookiesPerHour[i] + alkiBeachExistence.cookiesPerHour[i];
-    totalCookiesPerhourAllStores.push(hourSum);
-    // console.log("Am i working "+totalCookiesPerhourAllStores);
-    console.log('hourly sum'+hourSum);   
+    for(var j = 0; j < allStores.length; j++){
+      hourSum += allStores[j].cookiesPerHour[i];
+      
+      // totalCookiesPerhourAllStores.push(hourSum);
+    }
+    totalSum += hourSum;
+    // var hourSum = firstPikeExistence.cookiesPerHour[i] + seaTacExistence.cookiesPerHour[i] + seattleCenExistence.cookiesPerHour[i]+ capHillExistence.cookiesPerHour[i] + alkiBeachExistence.cookiesPerHour[i];
+    // totalCookiesPerhourAllStores.push(hourSum);
+  
     tdEl = document.createElement('td');
-    tdEl.textContent = totalCookiesPerhourAllStores[i];
+    tdEl.textContent = hourSum;
     trEl.appendChild(tdEl);
+    hourSum=0;
   }
   tdEl = document.createElement('td');
-  tdEl.textContent = GrandTotal;
+  tdEl.textContent = totalSum;
   trEl.appendChild(tdEl);
   storeTable.appendChild(trEl);
 }
 function handleStoreSubmit(event) {
 
-  event.preventDefault(); // gotta have it for this purpose. prevents page reload on a 'submit' event
+  event.preventDefault(); 
 
   new Store(event.target.location.value, event.target.min.value, event.target.max.value, event.target.avgc.value);
   
@@ -144,7 +155,7 @@ function handleStoreSubmit(event) {
   makeHeaderRow();
   renderAllStores();
   makeFooterRow();
-  // renderAllStores();
+
 }
 salesform.addEventListener('submit', handleStoreSubmit);
 
