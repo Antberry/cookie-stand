@@ -32,10 +32,8 @@ function Store (location, minCus, maxCus, avgCookieSale){
 //===========Constructor Prototype============================
 
 Store.prototype.total = function(){
-  // this.totalcookiesPerDay = 0;
   for (var i = 0; i < this.cookiesPerHour.length; i++){
     this.totalcookiesPerDay += this.cookiesPerHour[i];
-    // GrandTotal += this.totalcookiesPerDay;
   }
   console.log(this.totalcookiesPerDay);
 };
@@ -92,7 +90,6 @@ Store.prototype.render = function(){
     trEl.appendChild(tdEl);
   }
   tdEl = document.createElement('td');
-  // this.total();
   tdEl.textContent = this.totalcookiesPerDay;
   trEl.appendChild(tdEl);
   storeTable.appendChild(trEl);
@@ -109,13 +106,8 @@ function makeFooterRow(){
   for (var i = 0; i < hours.length; i++){
     for(var j = 0; j < allStores.length; j++){
       hourSum += allStores[j].cookiesPerHour[i];
-      
-      // totalCookiesPerhourAllStores.push(hourSum);
     }
     totalSum += hourSum;
-    // var hourSum = firstPikeExistence.cookiesPerHour[i] + seaTacExistence.cookiesPerHour[i] + seattleCenExistence.cookiesPerHour[i]+ capHillExistence.cookiesPerHour[i] + alkiBeachExistence.cookiesPerHour[i];
-    // totalCookiesPerhourAllStores.push(hourSum);
-  
     tdEl = document.createElement('td');
     tdEl.textContent = hourSum;
     trEl.appendChild(tdEl);
