@@ -1,23 +1,175 @@
+/*---------------------------------- FONTS----------------------------------- */
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
+@import url('https://fonts.googleapis.com/css?family=Rock+Salt');
+
 body{
+  font-family: Arial, Helvetica, sans-serif;
   background-color: darkgoldenrod;
-}
-#salmon {
-  text-align: center;
-}
-#fish{
-  width: 300px;
-}
-#dailysales{
-  text-align: center;
+  width: 80%;
+  margin: auto;
 }
 
-#navtabs{
-  text-align: right;
+/* -----------------------------------HOME PAGE----------------------------------- */
+/* ------------------------------------HEADER------------------------------------- */
+header{
+  margin-top: 30px;
 }
-#homefish{
-  width: 400px;
-  margin-left:400px;
+
+nav img{
+  float: left;
+  width: 100px;
+  height: 50px;
 }
-#slogan{
+
+#pats-logo li:first-child{
+  font-size: 40px;
+  margin-bottom: 5px;
+  font-family: 'Rock Salt', cursive;
+}
+
+#pat-logo li:last-child{
+  font-size: 25px;
+  font-style: italic
+}
+
+#nav-bar{
+  float: right;
+}
+
+#nav-bar li{
+  display: inline-block;
+}
+
+hr{
+  margin-top: 40px;
+}
+
+/* -------------------------------------MAIN-------------------------------------- */
+#hero{
+  width: 100%;
+  margin-top: 30px;
+}
+
+#merchhead{
+  font-size: 40px;
+  margin-top: 30px;
+}
+
+#merch li{
+  display: inline-block;
+  margin-top: 30px;
+  height: 200px;
+}
+
+button{
+  margin-top: 30px;
+  font-size: 20px;
+  border-radius: 10px;
+  padding: 5px;
+  background: rgba(88, 48, 22, 0.836);
+  color: rgb(230, 186, 137);
+  border: none;
+  cursor: pointer;
+}
+
+#button1{
+  margin-right: 180px;
+  margin-left: 100px;
+}
+
+#button2{
+  margin-right: 180px;
+}
+
+#merch li:first-child{
+  margin-right: 15px;
+}
+
+#merch li:last-child{
+  margin-left: 15px;
+}
+
+#history h2{
+  font-size: 40px;
+  margin-top: 30px;
+}
+
+#history p{
+  margin-top: 30px;
+  font-size: 20px;
+  overflow-y: scroll;
+  height: 200px;
+}
+
+/* ------------------------------------FOOTER------------------------------------- */
+footer{
+  height: 50px;
+  width: 100%;
+  padding-top: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
   text-align: center;
+  background: rgba(88, 48, 22, 0.836);
+  color: rgb(230, 186, 137);
+  font-size: 12px;
 }
+
+/* ----------------------------------SALES PAGE----------------------------------- */
+/* -------------------------------------MAIN------------------------------------- */
+#fish{
+  margin-left: 50px;
+}
+
+#slogan{
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-style: italic;
+  text-align: center;
+  font-family: 'Shadows Into Light', cursive;
+}
+
+fieldset{
+  margin-top: 30px;
+}
+
+#washingtonStores{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+#washingtonStores th, td{
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border: 1px solid black;
+  width: 90%;
+  text-align: center;
+  height: 10px;
+  padding-top: 5px; 
+  color: rgb(0, 0, 0);
+}
+
+#washingtonStores th{
+  padding-top: 20px;
+  width: 20px;
+  background: rgb(95, 56, 5);
+  color: goldenrod;
+}
+
+#washingtonStores td{
+  background: lightgrey;
+}
+
+#washingtonStores td:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#saleform{
+  margin-top: 30px;
+}
+
+input{
+  width: 200px;
+  margin-bottom: 30px;
+}
+
+
+/* ------------------------------------FOOTER------------------------------------- */

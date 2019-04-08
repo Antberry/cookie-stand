@@ -3,15 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <title>Salmon Cookie Sales</title>
- 
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-    <nav><a href="index.html">HomePage</a></nav>
+    <header>
+        <nav id="navtabs">
+          <a href="">
+            <img src="img/chinook.jpg" alt="picture of a cookie">
+          </a>
+          <ul id="pats-logo">
+            <li>Pats Salmon Cookies</li>
+            <li>The best in the PNW</li>
+          </ul>
+          <ul id="nav-bar">
+            <li>
+                <a href="index.html">HomePage</a>
+            </li>
+            <li>
+                <a href="">Locations</a>
+            </li>
+            <li>
+                <a href="">Hours</a>
+            </li>
+            <li>
+                <a href="">Contact Us</a>
+            </li>
+          </ul>
+        </nav>
+        <hr>
+    </header>
+    <main>
     <div id="salmon">
         <img id="fish" src="img/salmon.png" alt="salmon fish">
       <p id="slogan"><em>The first fish cookies right here in the PNW.</em></p>
     </div>
+    <hr>
     <form id="salesform">
         <fieldset>
           <legend>Create New Store</legend>
@@ -26,12 +53,20 @@
     
           <button type="submit">Submit</button>
         </fieldset>
-      </form>
+        <hr>
+    </form>
 
     <table id="washingtonStores">
-      
+        <col span="1" style="background-color:rgb(112, 70, 22)">
     </table>
     </div>
+   </main>
+   <footer>
+      <ul id="foot">
+          <li>Pat's Cookies 2019 . All Rights Reserved.</li>
+          <li>Thank you for visiting my website</li>
+        </ul>
+   </footer>
     <script src="js/app.js"></script>
 </body>
 </html>
